@@ -10,6 +10,7 @@
     --gold:#8a6b1f; --gold-light:#c6a047; --gold-pale:#f4e8c8;
     --charcoal:#444444; --grey:#8c8d91;
     --paper:#faf9f6; --card:#ffffff; --line:#d8d5cb;
+    --red:#a32d2d; --red-pale:#f7e3e1;
   }
   *{box-sizing:border-box;}
   body{margin:0;background:var(--paper);color:var(--charcoal);
@@ -47,6 +48,11 @@
   .node.green{border-top:4px solid var(--green);} .node.green .d{color:var(--green-dark);}
   .node.blue{border-top:4px solid var(--blue);} .node.blue .d{color:var(--blue);}
   .node.gold{border-top:4px solid var(--gold-light);} .node.gold .d{color:var(--gold);}
+  .node.red{border-top:4px solid var(--red);background:var(--red-pale);} .node.red .d{color:var(--red);}
+  .node.red .t{color:#5a1f1f;}
+  .caution-icon{display:inline-block;margin-right:5px;font-size:12px;}
+  .node.good{border-top:4px solid var(--green);background:#eaf3ec;} .node.good .d{color:var(--green-dark);}
+  .check-icon{display:inline-block;margin-right:5px;font-size:12px;}
 
   /* DOCUMENT PREVIEW NODE */
   .doc-node{
@@ -115,6 +121,8 @@
       <span><span class="swatch" style="background:var(--gold-light)"></span>Additional Info / Photo Proof</span>
       <span><span class="swatch" style="background:var(--green)"></span>Findings &amp; Next Steps</span>
       <span><span class="swatch" style="background:var(--charcoal)"></span>Decision Point</span>
+      <span><span class="swatch" style="background:var(--red)"></span>Problem Found</span>
+      <span><span class="swatch" style="background:var(--green-dark)"></span>Good Practice</span>
     </div>
   </header>
 
@@ -129,6 +137,12 @@
       <div class="m">Via Frances · asked to talk to husband first, but Frances booked the inspection for 8/26 2:30p anyway · 10m 20s call</div>
     </div>
 
+    <div class="connector"><span class="pill">same call</span><div class="arrow-line"></div></div>
+    <div class="node good" style="min-width:190px;">
+      <div class="d">✓ Good Practice</div>
+      <div class="t"><span class="check-icon">✅</span>Frances kept the booking alive</div>
+      <div class="m">Client said she wanted to wait/talk to her husband — Frances pushed the schedule through anyway instead of losing the appointment. Good persistence.</div>
+    </div>
     <div class="connector"><span class="pill">same call</span><div class="arrow-line"></div></div>
     <div class="audio-node">
       <div class="d">Call Recording</div>
@@ -165,9 +179,9 @@
     </div>
 
     <div class="connector gap"><span class="pill">1+ day, counting</span><div class="arrow-line"></div></div>
-    <div class="node green" style="min-width:280px;max-width:320px;">
-      <div class="d">Finding</div>
-      <div class="t">No AE follow-up received</div>
+    <div class="node red" style="min-width:280px;max-width:320px;">
+      <div class="d">⚠ Finding</div>
+      <div class="t"><span class="caution-icon">⚠️</span>No AE follow-up received</div>
       <div class="m">Cancelled orders left "Unscheduled" don't generate a lead or trigger any follow-up in Jordan's dashboard/flow — the record just sits with no next action assigned. Cortez (OID 253793) is the live example: cancelled Aug 25, no outreach as of this writing.</div>
     </div>
 

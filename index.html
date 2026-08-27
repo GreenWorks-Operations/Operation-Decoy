@@ -33,16 +33,16 @@
   .section-note a{color:var(--blue);}
 
   /* FLOW */
-  .flow-scroll{overflow-x:auto;padding:10px 4px 18px;}
-  .flow{display:flex;align-items:center;min-width:max-content;}
+  .flow-scroll{overflow-x:auto;padding:16px 4px 22px;}
+  .flow{display:flex;align-items:center;min-width:max-content;gap:14px;}
 
   .node{
     background:var(--card);border:1.5px solid var(--line);border-radius:6px;
-    min-width:150px;max-width:180px;padding:10px 12px;flex-shrink:0;
+    min-width:170px;max-width:210px;padding:12px 14px;flex-shrink:0;
   }
   .node .d{font-size:10px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin-bottom:3px;}
   .node .t{font-size:12.5px;font-weight:700;line-height:1.3;margin-bottom:3px;color:var(--charcoal);}
-  .node .m{font-size:11px;line-height:1.4;color:var(--grey);}
+  .node .m{font-size:11px;line-height:1.5;color:var(--grey);}
 
   .node.green{border-top:4px solid var(--green);} .node.green .d{color:var(--green-dark);}
   .node.blue{border-top:4px solid var(--blue);} .node.blue .d{color:var(--blue);}
@@ -51,11 +51,11 @@
   /* DOCUMENT PREVIEW NODE */
   .doc-node{
     background:var(--card);border:1.5px solid var(--line);border-top:4px solid var(--gold-light);
-    border-radius:6px;padding:8px;flex-shrink:0;width:190px;text-align:center;
+    border-radius:6px;padding:12px;flex-shrink:0;width:210px;text-align:center;
   }
   .doc-node img{width:100%;border-radius:3px;border:1px solid var(--line);display:block;margin-bottom:6px;}
   .doc-node .d{font-size:9.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--gold);margin-bottom:2px;}
-  .doc-node .t{font-size:11px;font-weight:700;color:var(--charcoal);margin-bottom:5px;line-height:1.25;}
+  .doc-node .t{font-size:11px;font-weight:700;color:var(--charcoal);margin-bottom:7px;line-height:1.4;}
   .doc-node a{font-size:10px;color:var(--blue);text-decoration:none;font-weight:700;}
   .doc-node a:hover{text-decoration:underline;}
   .doc-node .attach{font-size:9.5px;color:var(--grey);margin-top:5px;border-top:1px dashed var(--line);padding-top:5px;}
@@ -63,25 +63,25 @@
   /* AUDIO PREVIEW NODE */
   .audio-node{
     background:var(--card);border:1.5px solid var(--line);border-top:4px solid var(--blue);
-    border-radius:6px;padding:10px 12px;flex-shrink:0;min-width:210px;
+    border-radius:6px;padding:12px 14px;flex-shrink:0;min-width:220px;
   }
   .audio-node .d{font-size:10px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--blue);margin-bottom:3px;}
   .audio-node .t{font-size:12px;font-weight:700;color:var(--charcoal);margin-bottom:6px;}
   .audio-node audio{width:100%;height:32px;}
 
-  .diamond-wrap{flex-shrink:0;display:flex;flex-direction:column;align-items:center;margin:0 2px;}
+  .diamond-wrap{flex-shrink:0;display:flex;flex-direction:column;align-items:center;margin:0 6px;}
   .diamond{
-    width:74px;height:74px;background:var(--charcoal);transform:rotate(45deg);
-    display:flex;align-items:center;justify-content:center;border-radius:6px;
+    width:104px;height:104px;background:var(--charcoal);transform:rotate(45deg);
+    display:flex;align-items:center;justify-content:center;border-radius:8px;
     box-shadow:0 1px 3px rgba(0,0,0,.15);
   }
-  .diamond span{transform:rotate(-45deg);color:#fff;font-size:10px;font-weight:700;
-    text-align:center;line-height:1.25;width:56px;}
+  .diamond span{transform:rotate(-45deg);color:#fff;font-size:9.5px;font-weight:700;
+    text-align:center;line-height:1.3;width:76px;}
   .diamond.flagged{background:var(--gold-light);}
   .diamond.flagged span{color:#3a2e0f;}
 
   .connector{flex-shrink:0;display:flex;flex-direction:column;align-items:center;
-    width:64px;position:relative;}
+    width:72px;position:relative;}
   .connector .pill{
     font-size:9.5px;font-weight:700;color:#fff;background:var(--charcoal);
     padding:2px 7px;border-radius:8px;white-space:nowrap;margin-bottom:3px;
@@ -165,7 +165,7 @@
     </div>
 
     <div class="connector gap"><span class="pill">1+ day, counting</span><div class="arrow-line"></div></div>
-    <div class="node green" style="min-width:260px;max-width:290px;">
+    <div class="node green" style="min-width:280px;max-width:320px;">
       <div class="d">Finding</div>
       <div class="t">No AE follow-up received</div>
       <div class="m">Cancelled orders left "Unscheduled" don't generate a lead or trigger any follow-up in Jordan's dashboard/flow — the record just sits with no next action assigned. Cortez (OID 253793) is the live example: cancelled Aug 25, no outreach as of this writing.</div>
